@@ -1,0 +1,79 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Nisha!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            color: #333;
+            padding: 50px;
+            overflow: hidden;
+        }
+        h1 {
+            color: #ff69b4;
+            animation: fadeIn 2s ease-in-out;
+        }
+        p {
+            font-size: 1.2em;
+            animation: slideUp 2s ease-out 1s both;
+        }
+        .heart {
+            font-size: 100px;
+            color: #ff69b4;
+            animation: pulse 1.5s ease-in-out infinite;
+            margin: 20px auto;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday, Nisha!</h1>
+    <div class="heart">❤️</div>
+    <p>Wishing you a day filled with joy, laughter, and all your favorite things. May this year bring you happiness and success!</p>
+    <p>On your special day, may all your dreams come true and your heart be filled with love and warmth. Here's to another year of adventures and cherished memories!</p>
+    <p>🎉🎂🥳</p>
+    <h3>Enjoy your special day, Nisha!
+        <br>
+        dear Nisha lots of love from me
+    </h3>
+    
+    <script>
+        // Unique animation: Confetti effect on click
+        document.addEventListener('click', function() {
+            const confetti = document.createElement('div');
+            confetti.style.position = 'absolute';
+            confetti.style.width = '10px';
+            confetti.style.height = '10px';
+            confetti.style.backgroundColor = ['red', 'blue', 'green', 'yellow', 'purple'][Math.floor(Math.random() * 5)];
+            confetti.style.left = Math.random() * window.innerWidth + 'px';
+            confetti.style.top = '0px';
+            confetti.style.animation = 'fall 3s linear forwards';
+            document.body.appendChild(confetti);
+            setTimeout(() => confetti.remove(), 3000);
+        });
+        // Add keyframes for confetti fall
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fall {
+                to { transform: translateY(100vh); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
